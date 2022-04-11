@@ -4,14 +4,14 @@ using System.ComponentModel;
 
 namespace total_blood_management_soulution_Components
 {
-    public class sqlComponent : Component
+    public class SqlComponent : Component
     {
-        public class sqlData
+        public class SqlData
         {
             public List<string> m_sqlList;
             public List<List<string>> m_sqlParam;
 
-            public sqlData()
+            public SqlData()
             {
                 m_sqlList = new List<string>();
                 m_sqlParam = new List<List<string>>();

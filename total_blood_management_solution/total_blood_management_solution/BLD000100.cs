@@ -12,7 +12,6 @@ namespace total_blood_management_solution
 {
     public partial class BLD000100 : Form
     {
-        string str = "";
         public BLD000100()
         {
             InitializeComponent();
