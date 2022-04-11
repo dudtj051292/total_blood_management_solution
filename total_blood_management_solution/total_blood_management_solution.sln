@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "total_blood_management_solu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "total_blood_management_soulution_Components", "total_blood_management_soulution_Components\total_blood_management_soulution_Components.csproj", "{F2C96D4C-6BB7-4171-BF6C-52CF26FC26A4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "total_blood_management_soulution_OracleConnection", "total_blood_management_soulution_OracleConnection\total_blood_management_soulution_OracleConnection.csproj", "{641FA422-0356-4923-B809-A98E7ACAFAE4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F2C96D4C-6BB7-4171-BF6C-52CF26FC26A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2C96D4C-6BB7-4171-BF6C-52CF26FC26A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2C96D4C-6BB7-4171-BF6C-52CF26FC26A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{641FA422-0356-4923-B809-A98E7ACAFAE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{641FA422-0356-4923-B809-A98E7ACAFAE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{641FA422-0356-4923-B809-A98E7ACAFAE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{641FA422-0356-4923-B809-A98E7ACAFAE4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

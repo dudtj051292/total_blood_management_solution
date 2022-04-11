@@ -1,6 +1,6 @@
 ﻿namespace total_blood_management_solution
 {
-    partial class Form1
+    partial class LoginForm
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.
@@ -29,26 +29,26 @@
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.chk_autoLogin = new System.Windows.Forms.CheckBox();
+            this.chk_savepwd = new System.Windows.Forms.CheckBox();
+            this.chk_saveid = new System.Windows.Forms.CheckBox();
+            this.text_input_PWD = new DevExpress.XtraEditors.TextEdit();
             this.text_Input_ID = new DevExpress.XtraEditors.TextEdit();
+            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.text_input_PWD = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.chk_saveid = new System.Windows.Forms.CheckBox();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.chk_savepwd = new System.Windows.Forms.CheckBox();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.chk_autoLogin = new System.Windows.Forms.CheckBox();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.text_input_PWD.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.text_Input_ID.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.text_input_PWD.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
@@ -71,6 +71,49 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // chk_autoLogin
+            // 
+            this.chk_autoLogin.Location = new System.Drawing.Point(12, 226);
+            this.chk_autoLogin.Name = "chk_autoLogin";
+            this.chk_autoLogin.Size = new System.Drawing.Size(260, 20);
+            this.chk_autoLogin.TabIndex = 8;
+            this.chk_autoLogin.Text = "자동로그인";
+            this.chk_autoLogin.UseVisualStyleBackColor = true;
+            // 
+            // chk_savepwd
+            // 
+            this.chk_savepwd.Location = new System.Drawing.Point(12, 202);
+            this.chk_savepwd.Name = "chk_savepwd";
+            this.chk_savepwd.Size = new System.Drawing.Size(260, 20);
+            this.chk_savepwd.TabIndex = 7;
+            this.chk_savepwd.Text = "비밀번호 저장";
+            this.chk_savepwd.UseVisualStyleBackColor = true;
+            // 
+            // chk_saveid
+            // 
+            this.chk_saveid.Location = new System.Drawing.Point(12, 178);
+            this.chk_saveid.Name = "chk_saveid";
+            this.chk_saveid.Size = new System.Drawing.Size(260, 20);
+            this.chk_saveid.TabIndex = 6;
+            this.chk_saveid.Text = "아이디 저장";
+            this.chk_saveid.UseVisualStyleBackColor = true;
+            // 
+            // text_input_PWD
+            // 
+            this.text_input_PWD.Location = new System.Drawing.Point(55, 154);
+            this.text_input_PWD.Name = "text_input_PWD";
+            this.text_input_PWD.Size = new System.Drawing.Size(217, 20);
+            this.text_input_PWD.StyleController = this.layoutControl1;
+            this.text_input_PWD.TabIndex = 5;
+            // 
+            // text_Input_ID
+            // 
+            this.text_Input_ID.Location = new System.Drawing.Point(55, 130);
+            this.text_Input_ID.Name = "text_Input_ID";
+            this.text_Input_ID.Size = new System.Drawing.Size(217, 20);
+            this.text_Input_ID.StyleController = this.layoutControl1;
+            this.text_Input_ID.TabIndex = 4;
+            // 
             // Root
             // 
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -81,19 +124,11 @@
             this.layoutControlItem2,
             this.emptySpaceItem2,
             this.layoutControlItem3,
-            this.layoutControlItem4,
-            this.layoutControlItem5});
+            this.layoutControlItem5,
+            this.layoutControlItem4});
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(284, 361);
             this.Root.TextVisible = false;
-            // 
-            // text_Input_ID
-            // 
-            this.text_Input_ID.Location = new System.Drawing.Point(64, 130);
-            this.text_Input_ID.Name = "text_Input_ID";
-            this.text_Input_ID.Size = new System.Drawing.Size(208, 20);
-            this.text_Input_ID.StyleController = this.layoutControl1;
-            this.text_Input_ID.TabIndex = 4;
             // 
             // layoutControlItem1
             // 
@@ -107,18 +142,10 @@
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 214);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 238);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(264, 127);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(264, 103);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // text_input_PWD
-            // 
-            this.text_input_PWD.Location = new System.Drawing.Point(64, 154);
-            this.text_input_PWD.Name = "text_input_PWD";
-            this.text_input_PWD.Size = new System.Drawing.Size(208, 20);
-            this.text_input_PWD.StyleController = this.layoutControl1;
-            this.text_input_PWD.TabIndex = 5;
             // 
             // layoutControlItem2
             // 
@@ -137,75 +164,48 @@
             this.emptySpaceItem2.Size = new System.Drawing.Size(264, 118);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // chk_saveid
-            // 
-            this.chk_saveid.Location = new System.Drawing.Point(12, 178);
-            this.chk_saveid.Name = "chk_saveid";
-            this.chk_saveid.Size = new System.Drawing.Size(128, 20);
-            this.chk_saveid.TabIndex = 6;
-            this.chk_saveid.Text = "아이디 저장";
-            this.chk_saveid.UseVisualStyleBackColor = true;
-            // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.chk_saveid;
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 166);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(132, 24);
+            this.layoutControlItem3.Size = new System.Drawing.Size(264, 24);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
-            // 
-            // chk_savepwd
-            // 
-            this.chk_savepwd.Location = new System.Drawing.Point(144, 178);
-            this.chk_savepwd.Name = "chk_savepwd";
-            this.chk_savepwd.Size = new System.Drawing.Size(128, 20);
-            this.chk_savepwd.TabIndex = 7;
-            this.chk_savepwd.Text = "비밀번호 저장";
-            this.chk_savepwd.UseVisualStyleBackColor = true;
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.chk_savepwd;
-            this.layoutControlItem4.Location = new System.Drawing.Point(132, 166);
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 190);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(132, 24);
+            this.layoutControlItem4.Size = new System.Drawing.Size(264, 24);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
-            // 
-            // chk_autoLogin
-            // 
-            this.chk_autoLogin.Location = new System.Drawing.Point(12, 202);
-            this.chk_autoLogin.Name = "chk_autoLogin";
-            this.chk_autoLogin.Size = new System.Drawing.Size(260, 20);
-            this.chk_autoLogin.TabIndex = 8;
-            this.chk_autoLogin.Text = "자동로그인";
-            this.chk_autoLogin.UseVisualStyleBackColor = true;
             // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.chk_autoLogin;
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 190);
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 214);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(264, 24);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
-            // Form1
+            // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 361);
             this.Controls.Add(this.layoutControl1);
-            this.Name = "Form1";
+            this.Name = "LoginForm";
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.text_input_PWD.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.text_Input_ID.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.text_input_PWD.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();

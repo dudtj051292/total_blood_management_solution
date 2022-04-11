@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace total_blood_management_solution
 {
-    public partial class Form1 : Form
+    public partial class LoginForm : Form
     {
-        public Form1()
+        public LoginForm()
         {
             InitializeComponent();
         }
