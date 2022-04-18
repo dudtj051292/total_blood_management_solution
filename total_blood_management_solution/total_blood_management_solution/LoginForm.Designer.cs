@@ -29,27 +29,34 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.bld_tPW = new System.Windows.Forms.TextBox();
+            this.bld_tID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // bld_tPW
             // 
-            this.textBox1.Location = new System.Drawing.Point(81, 182);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(170, 21);
-            this.textBox1.TabIndex = 0;
+            this.bld_tPW.Location = new System.Drawing.Point(81, 182);
+            this.bld_tPW.MaxLength = 10;
+            this.bld_tPW.Name = "bld_tPW";
+            this.bld_tPW.PasswordChar = '*';
+            this.bld_tPW.Size = new System.Drawing.Size(170, 21);
+            this.bld_tPW.TabIndex = 1;
             // 
-            // textBox2
+            // bld_tID
             // 
-            this.textBox2.Location = new System.Drawing.Point(81, 155);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(170, 21);
-            this.textBox2.TabIndex = 1;
+            this.bld_tID.Location = new System.Drawing.Point(81, 155);
+            this.bld_tID.MaxLength = 30;
+            this.bld_tID.Name = "bld_tID";
+            this.bld_tID.Size = new System.Drawing.Size(170, 21);
+            this.bld_tID.TabIndex = 0;
+            this.bld_tID.Validating += new System.ComponentModel.CancelEventHandler(this.bld_tID_Validating);
             // 
             // label1
             // 
@@ -81,18 +88,53 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
+            // btnLogin
+            // 
+            this.btnLogin.Location = new System.Drawing.Point(39, 223);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(75, 23);
+            this.btnLogin.TabIndex = 5;
+            this.btnLogin.Text = "로그인";
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(145, 223);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.TabIndex = 6;
+            this.btnExit.Text = "종료";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(80, 140);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(169, 12);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "아이디는 영문만 입력해주세요";
+            this.label3.Visible = false;
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(263, 296);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.bld_tID);
+            this.Controls.Add(this.bld_tPW);
             this.Name = "LoginForm";
             this.Text = "로그인";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -101,10 +143,13 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox bld_tPW;
+        private System.Windows.Forms.TextBox bld_tID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Label label3;
     }
 }
