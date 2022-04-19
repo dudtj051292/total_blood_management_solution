@@ -21,7 +21,14 @@ namespace total_blood_management_solution
 #endif
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+            LoginForm frm = new LoginForm();
+            Application.Run(frm);
+
+            if (frm.isLoggin)
+            {
+                Application.Run(new Form1() );
+            }
+
         }
         static public bool IsApplicationAlreadyRunning()
         {

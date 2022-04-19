@@ -16,6 +16,7 @@ namespace total_blood_management_solution
 {
     public partial class LoginForm : Form
     {
+        public bool isLoggin { get; set; }
         public LoginForm()
         {
             InitializeComponent();
@@ -30,8 +31,6 @@ namespace total_blood_management_solution
         {
             OracleConnection conn = myOraConnection.getConnection();
 
-           
-
             string id = bld_tID.Text;
             string pw = bld_tPW.Text;
 
@@ -44,9 +43,6 @@ namespace total_blood_management_solution
             {
                 MessageBox.Show("비밀번호를 입력해주세요.");
             }
-
-
-           
 
             string sql = 
                   " SELECT A.ST_ID, A.ST_PASSWORD, C.ST_ROLE          \n"
@@ -69,6 +65,10 @@ namespace total_blood_management_solution
                 if(Utils.passwordVerified(pw, password))
                 {
                     //MAinForm 오픈
+                    this.Close();
+                    isLoggin = true;
+                    
+                     
                 }
             }
 
@@ -84,18 +84,6 @@ namespace total_blood_management_solution
 
         private void bld_tID_Validating(object sender, CancelEventArgs e)
         {
-            TextBox box = sender as TextBox;
-            Regex emailregex = new Regex(@"[0-9a-zA-Z]");
-            Boolean ismatch = emailregex.IsMatch(box.Text);
-            if (!ismatch)
-            {
-                label3.Visible = true;
-                e.Cancel = true;
-            }
-            else
-            {
-                label3.Visible = false;
-            }
 
         }
 
@@ -111,6 +99,16 @@ namespace total_blood_management_solution
             {
                 OracleConnection conn = new OracleConnection((sender as TextBox).Text);
             }
+        }
+
+
+        private void bld_tPW_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin.PerformClick();
+            }
+
         }
     }
 }
